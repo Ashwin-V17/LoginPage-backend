@@ -7,7 +7,16 @@ require("dotenv").config();
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(cors());
+const corsOptions = {
+  origin: [
+    "http://localhost:3000",
+    "https://login-page-frontend-4uh3gjy64-ashwin-vs-projects.vercel.app/",
+  ],
+  methods: "GET,POST",
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
+
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 const mongoURI = process.env.MONGO_URI;
