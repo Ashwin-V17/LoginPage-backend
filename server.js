@@ -31,7 +31,7 @@ app.post("/login", async (req, res) => {
   if (user) {
     res.status(200).json({
       message: "Login successful",
-      redirectUrl: "http://ecom-site.com",
+      redirectUrl: "http://www.amazon.in/",
     });
   } else {
     res.status(401).json({ message: "Invalid credentials" });
