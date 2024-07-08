@@ -20,6 +20,7 @@ app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 const mongoURI = process.env.MONGO_URI;
+console.log(mongoURI);
 
 mongoose
   .connect(mongoURI, {})
