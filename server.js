@@ -10,7 +10,7 @@ const port = process.env.PORT || 3000;
 const corsOptions = {
   origin: [
     "http://localhost:3000",
-    "https://login-page-frontend-4uh3gjy64-ashwin-vs-projects.vercel.app/login",
+    "https://login-page-frontend-4uh3gjy64-ashwin-vs-projects.vercel.app",
   ],
   methods: "GET,POST",
   allowedHeaders: ["Content-Type", "Authorization"],
