@@ -10,7 +10,7 @@ const port = process.env.PORT || 3000;
 const corsOptions = {
   origin: [
     "http://localhost:3000",
-    "https://login-page-frontend-4uh3gjy64-ashwin-vs-projects.vercel.app/",
+    "https://login-page-frontend-4uh3gjy64-ashwin-vs-projects.vercel.app",
   ],
   methods: "GET,POST",
   allowedHeaders: ["Content-Type", "Authorization"],
@@ -20,7 +20,7 @@ app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 const mongoURI = process.env.MONGO_URI;
-console.log(mongoURI);
+// console.log(mongoURI);
 
 mongoose
   .connect(mongoURI, {})
